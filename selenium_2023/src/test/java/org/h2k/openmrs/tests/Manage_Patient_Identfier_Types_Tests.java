@@ -9,4 +9,10 @@ public class Manage_Patient_Identfier_Types_Tests {
 	{
 		
 	}
-}
+	
+	@Test
+	public void validate_delete_patient_identifier_types()
+	{
+		
+	}
+} 
