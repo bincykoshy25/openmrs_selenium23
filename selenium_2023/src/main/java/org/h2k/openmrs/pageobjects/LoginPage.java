@@ -8,7 +8,7 @@ public class LoginPage {
 	WebDriver driver;
 	private By loginUsername = By.id("username");
 	private By loginPassword = By.id("password");
-	private By loginType = By.id("//ul[@id='sessionLocation']/li[2]");
+	private By loginType = By.xpath("//ul[@id='sessionLocation']/li[2]");
 	private By loginButton = By.id("loginButton");
 	
 	public LoginPage(WebDriver driver)
