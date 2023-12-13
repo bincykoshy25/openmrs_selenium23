@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('health check') {
+            steps {
+                bat 'ping demo.openmrs.org -n 5'
+				bat 'dir'
+            }
+        }
+		stage('Execute Selenium scripts') {
+            steps {
+                git branch: 'main', url: 'https://github.com/bincykoshy25/openmrs_selenium23.git'
+				dir('selenium_2023') {
+					bat 'mvn clean test'
+				}
+            }
+        }
+    }
+}
